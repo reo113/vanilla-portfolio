@@ -56,6 +56,7 @@
                 class="job"
                 data-job1="{Developer.}"
                 data-job2="{Engineer.}"
+                data-job3="{Engineer.}"
               ></div>
             </div>
           </h1>
@@ -235,7 +236,7 @@
       <div id="project">
         <div class="title">PROJECT</div>
         <div class="listproject">
-          <a href="public/seminar_presentation.pptx">
+          <!-- <a href="public/seminar_presentation.pptx"> -->
             <div class="item" id="seminar">
               <img src="public/seminar_project.png" alt="" />
               <div class="name">
@@ -246,7 +247,7 @@
                 <i class="fa-solid fa-person-chalkboard"></i>
               </div>
             </div>
-          </a>
+          <!-- </a> -->
           <div class="item">
             <img src="public/retro_idea.png" alt="" />
             <div class="name">Project</div>
@@ -257,7 +258,17 @@
           </div>
         </div>
       </div>
-
+      <!-- project modal -->
+      <div class="project-container">
+        <div id="project-slide">
+         
+        </div>
+        <button id="slide-button"><i class="fa-solid fa-xmark"></i></button>
+        <div class="buttons">
+          <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+          <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+      </div>
       <!-- contact -->
       <div id="contact">
         <div class="title">CONTACT</div>
@@ -270,5 +281,6 @@
         </ul>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
