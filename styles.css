@@ -59,7 +59,6 @@ header ul li {
 }
 .banner .content {
   text-align: justify;
-  padding-right: 50px;
 }
 .banner .content h1 {
   font-size: 4em;
@@ -293,6 +292,7 @@ header ul li {
   border-radius: 10px;
   font-weight: bold;
   font-size: medium;
+  position: relative;
 }
 .listproject .item img {
   width: 90%;
@@ -307,14 +307,16 @@ header ul li {
   text-align: start;
 }
 
-#seminar i {
+.icon-container i {
   font-size: 20px;
 }
 .icon-container {
-  padding-top: 10px;
-  display: flex;
-  justify-content: end;
+  position: absolute;
+  bottom:10px;
+  right:10px;
+  gap:5px;
 }
+
 #seminar:hover i {
   background-image: var(--gradient);
   -webkit-background-clip: text;
