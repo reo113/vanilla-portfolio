@@ -22,6 +22,8 @@ document.getElementById('seminar').addEventListener('click', function () {
 
   var projectContainer = document.querySelector('.project-container');
   projectContainer.style.display = 'inline-block';
+  var project = document.getElementById('project');
+  project.style.filter = 'blur(5px)';
 });
 document.getElementById('bee').addEventListener('click', function () {
   for (var i = 0; i < projectTwoImages.length; i++) {
@@ -42,6 +44,8 @@ document.getElementById('bee').addEventListener('click', function () {
 
   var projectContainer = document.querySelector('.project-container');
   projectContainer.style.display = 'inline-block';
+  var project = document.getElementById('project');
+  project.style.filter = 'blur(5px)';
 });
 document.getElementById("slide-button").addEventListener('click', function () {
   var projectContainer = document.querySelector('.project-container');
@@ -51,6 +55,8 @@ document.getElementById("slide-button").addEventListener('click', function () {
   }
 
   projectContainer.style.display = 'none';
+  var project = document.getElementById('project');
+  project.style.filter = 'none';
   var projectItems = document.querySelectorAll('.project-item');
   projectItems.forEach(function (item) {
     item.remove();

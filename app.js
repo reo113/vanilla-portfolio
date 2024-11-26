@@ -40,6 +40,9 @@ document.getElementById('seminar').addEventListener('click', function () {
     }
     let projectContainer = document.querySelector('.project-container');
     projectContainer.style.display = 'inline-block';
+    let project = document.getElementById('project');
+    project.style.filter = 'blur(5px)';
+    
 });
 
 document.getElementById('bee').addEventListener('click', function () {
@@ -60,6 +63,8 @@ document.getElementById('bee').addEventListener('click', function () {
     }
     let projectContainer = document.querySelector('.project-container');
     projectContainer.style.display = 'inline-block';
+    let project = document.getElementById('project');
+    project.style.filter = 'blur(5px)';
 });
 
 document.getElementById("slide-button").addEventListener('click', function () {
@@ -68,6 +73,8 @@ document.getElementById("slide-button").addEventListener('click', function () {
         console.log("Project container exists");
     }
     projectContainer.style.display = 'none';
+    let project = document.getElementById('project');
+    project.style.filter = 'none';
     let projectItems = document.querySelectorAll('.project-item');
     projectItems.forEach(item => {
         item.remove();

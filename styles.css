@@ -317,7 +317,6 @@ header ul li {
   bottom: 10px;
   right: 10px;
   gap: 5px;
-  z-index: 9999;
 }
 
 .listproject .item:hover i {
@@ -355,63 +354,7 @@ header .navdiv,
 header ul label {
   display: none;
 }
-@media screen and (max-width: 1024px) {
-  .banner .content h1 {
-    font-size: 2em;
-  }
-  .listproject {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 767px) {
-  header ul {
-    position: fixed;
-    background-color: #f0f3f5;
-    width: 70%;
-    height: 100vh;
-    left: 0;
-    top: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 70px);
-    margin: 0;
-    transform: translateX(-100%);
-    transition: 0.5s;
-  }
-  header .navdiv {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-  }
-  header label {
-    width: 50px;
-    height: 50px;
-    box-shadow: var(--box-shadow);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  input#menu:checked ~ .nav {
-    transform: translateX(0);
-  }
-  header .nav label {
-    display: flex;
-    transform: translateX(20px);
-  }
-  .banner {
-    grid-template-columns: 1fr;
-  }
-  .banner .content {
-    padding-right: 0;
-  }
-  .banner .avatar {
-    grid-row-start: 1;
-  }
-  .listskill .listproject {
-    grid-template-columns: 1fr;
-  }
-}
+
 .slider {
   width: 100%;
   height: var(--height);
@@ -456,7 +399,7 @@ header ul label {
   display: none;
   position: absolute;
   left: 50%;
-  top: 100%;
+  top: 120%;
   transform: translate(-50%, -50%);
   width: 1000px;
   height: 600px;
@@ -486,6 +429,9 @@ header ul label {
   background-repeat: no-repeat;
 }
 
+.project-item:nth-child(1):hover ~ .project-item {
+  opacity: 0;
+}
 .project-item:nth-child(1) {
   left: 0;
   top: 0;
@@ -544,10 +490,7 @@ header ul label {
 .buttons button:hover {
   background-image: var(--gradient);
 }
-.project-item:nth-child(2) .project-content {
-  display: block;
-  z-index: 999;
-}
+
 
 .project-item .project-name {
   font-size: 40px;
@@ -577,5 +520,133 @@ header ul label {
     opacity: 1;
     transform: translateY(0);
     filter: blur(0);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .banner .content h1 {
+    font-size: 2em;
+  }
+  .listproject {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project-container {
+    display: none;
+    position: absolute;
+    width: 600px;
+    height: 400px;
+
+
+  }
+  .project-item {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-position: center;
+    transform: scale(0.8);
+  }
+  .project-item:nth-child(n+1):not(:nth-child(1)) {
+   opacity: 0;
+  }
+  .project-item .project-content {
+    width: 50px;
+  }
+  .buttons {
+    position: relative;
+    bottom: -70%;
+    z-index: 9999;
+    width: 100%;
+  }
+  .buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    transition: 0.5s;
+  }
+  #slide-button{
+    bottom:90%;
+  }
+}
+@media screen and (max-width: 767px) {
+  header ul {
+    position: fixed;
+    background-color: #f0f3f5;
+    width: 70%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 70px);
+    margin: 0;
+    transform: translateX(-100%);
+    transition: 0.5s;
+  }
+  header .navdiv {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  header label {
+    width: 50px;
+    height: 50px;
+    box-shadow: var(--box-shadow);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input#menu:checked ~ .nav {
+    transform: translate(0,0);
+  }
+  header .nav label {
+    display: flex;
+    transform: translateX(20px);
+  }
+  .banner {
+    grid-template-columns: 1fr;
+  }
+  .banner .content {
+    padding-right: 0;
+  }
+  .banner .avatar {
+    grid-row-start: 1;
+  }
+  .listproject {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .project-container {
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%,90%);
+  }
+  .project-item {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-position: center;
+ 
+  }
+  .project-item .project-content {
+    width: 50px;
+  }
+  .buttons {
+    position: relative;
+    bottom: -70%;
+    z-index: 9999;
+    width: 100%;
+  }
+  .buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    transition: 0.5s;
+  }
+  #slide-button{
+    bottom:90%;
   }
 }
